@@ -1,0 +1,5 @@
+1) Create data models for POS and TRN
+2) Parse data into models
+3) Main tracker class should have global variables that keep track of the data going through the models day-to-day.
+  a) Cache/map to store balances between days 0 and 1. Return back the balances that don't zero out in the recon.out file
+4) //todo
