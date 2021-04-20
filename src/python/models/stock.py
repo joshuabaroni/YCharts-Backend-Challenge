@@ -4,12 +4,16 @@
 """
 class Stock:
     symbol = ""
-    value_per_share = 0
+    shares = None
+    # value_per_share = None # UNKNOWN
 
-    def __init__(self, symbol, value_per_share):
+    def __init__(self, symbol, shares):
         self.symbol = symbol
-        self.value_per_share = value_per_share
+        self.shares = shares
 
-    def __init__(self, symbol, shares, value):
-        self.symbol = symbol
-        self.__init__(self, symbol, value / shares)
+    # def __init__(self, symbol, shares, value):
+    #     self.__init__(self, symbol, shares)
+    #     self.value_per_share = value / shares
+
+    def to_string(self):
+        return self.symbol + ":" + self.shares

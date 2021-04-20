@@ -1,18 +1,16 @@
+from src.python.models.daily_snapshot import DailySnapshot
+from src.python.static import utils
 
 """
 A Snapshot of the portfolio by day. make a new instance per day
 """
-class PortfolioSnapshot:
+class PortfolioSnapshot(DailySnapshot):
 
-    ownedStocks = {}
-    cash = 0
+    owned_stocks = []
 
-    def __init__(self, **kwargs):
-        try:
-            self.cash += kwargs.__getitem__("cash")
-            self.ownedStocks = kwargs.__getitem__("stocks").values()
-        finally:
-            print("New Portfolio Object init")
+    def __init__(self):
+        self.owned_stocks = [] # deconstruct existing object by clearing owned_stocks cache
+        print(utils.logger_header + "New PortfolioSnapshot init")
 
     def reconcile(self, portfolio_snapshot2):
         dif = {}

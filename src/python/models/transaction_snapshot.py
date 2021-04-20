@@ -1,14 +1,15 @@
+from src.python.static import utils
+
 """
 A Snapshot of the transactions for a portfolio by day. make a new instance per day
 """
-class TransactionSnapshot:
+from src.python.models.daily_snapshot import DailySnapshot
+
+
+class TransactionSnapshot(DailySnapshot):
 
     transactions = []  # list of transactions taken on a given day
-    cash = 0
 
-    def __init__(self, **kwargs):
-        try:
-            self.cash += kwargs.__getitem__("cash")
-            self.ownedStocks = kwargs.__getitem__("stocks").values()
-        finally:
-            print("New Portfolio Object init")
+    def __init__(self):
+        transactions = [] # deconstruct existing object by clearing transaction cache
+        print(utils.logger_header + "New TransactionSnapshot init")
