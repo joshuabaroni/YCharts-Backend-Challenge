@@ -27,7 +27,6 @@ def parse_recon_files(filepaths):
                         portfolio[tag] = transaction_snap
                         transaction_snap = TransactionSnapshot()
                         tag = content.split("\n")[0]
-                        print(utils.logger_header + "tag: " + tag)
                 else:
                     if content.__contains__(" "):
                         if portfolio_snap is None:
@@ -37,16 +36,13 @@ def parse_recon_files(filepaths):
                         portfolio[tag] = portfolio_snap
                         portfolio_snap = PortfolioSnapshot()
                         tag = content.split("\n")[0]
-                        print(utils.logger_header + "tag: " + tag)
                     else:
                         tag = content.split("\n")[0]
-                        print(utils.logger_header + "tag: " + tag)
             portfolio[tag] = portfolio_snap
             portfolio_snap = PortfolioSnapshot()
         elif filepath.__contains__("_out"):
             # portfolio = read_outfile(portfolio, filepath)
             write_outfile(portfolio, filepath)
-    return portfolio
 
 
 # writes to outfile

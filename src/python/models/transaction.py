@@ -1,9 +1,11 @@
 from enum import Enum
 
+from src.python.models.position import Position
+
 """
 Data Model for an individual Transaction
 """
-class Transaction:
+class Transaction(Position):
 
     # todo how to make static in py?
     class Code (Enum):
@@ -14,9 +16,7 @@ class Transaction:
         DIVIDEND = "DIVIDEND"
         DEFAULT = "UNKNOWN"
 
-    symbol = None
     code = Code.DEFAULT
-    shares = None
     value = None
 
     def __init__(self, symbol, code, shares, value):
