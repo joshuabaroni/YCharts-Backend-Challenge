@@ -16,4 +16,4 @@ class Stock:
     #     self.value_per_share = value / shares
 
     def to_string(self):
-        return self.symbol + ":" + self.shares
+        return self.symbol + " " + str(self.shares)

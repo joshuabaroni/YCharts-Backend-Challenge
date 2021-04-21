@@ -13,3 +13,11 @@ class TransactionSnapshot(DailySnapshot):
     def __init__(self):
         transactions = [] # deconstruct existing object by clearing transaction cache
         print(utils.logger_header + "TransactionSnapshot cache cleared")
+
+    def to_string(self):
+        out_str = "Cash " + str(self.cash) + "\n"
+        for t in self.transactions:
+            out_str += t.to_string() + "\n"
+        return out_str
+
+

@@ -26,4 +26,4 @@ class Transaction:
         self.code = code if self.Code.value2member_map_ else self.Code.DEFAULT
 
     def to_string(self):
-        return self.symbol + ":" + self.code + ":" + self.shares + ":" + self.value
+        return self.symbol + " " + self.code + " " + str(self.shares) + " " + str(self.value)
