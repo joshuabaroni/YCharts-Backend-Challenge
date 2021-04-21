@@ -19,7 +19,7 @@ $ cd <path/to/clone/destination>/YCharts-Backend-Challenge
 
 ### Run this project
 ```console
-python -m src.python.main src/resources/input/recon_in.txt src/resources/output/rec
+$ python -m src.python.main src/resources/input/recon_in.txt src/resources/output/rec
 on_out.txt
 ```
 
