@@ -23,7 +23,7 @@ class Transaction:
         self.symbol = symbol
         self.shares = shares
         self.value = value
-        self.code = code if self.Code.value2member_map_ else self.Code.DEFAULT
+        self.code = code if self.Code.__members__ else self.Code.DEFAULT
 
     def to_string(self):
         return self.symbol + " " + self.code + " " + str(self.shares) + " " + str(self.value)
