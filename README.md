@@ -6,7 +6,7 @@ The 2nd round interview project for the Data Engineer role at YCharts
 Installing python
 [Windows](https://docs.python.org/3/using/windows.html)
 [Mac](https://docs.python.org/3/using/mac.html)
-
+[Unix](https://docs.python.org/3/using/unix.html)
 ### Clone private repo
 ```console
 $ git clone https://github.com/joshuabaroni/YCharts-Backend-Challenge.git
