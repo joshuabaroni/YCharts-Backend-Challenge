@@ -10,7 +10,7 @@ class PortfolioSnapshot(DailySnapshot):
 
     def __init__(self):
         self.owned_stocks = [] # deconstruct existing object by clearing owned_stocks cache
-        print(utils.logger_header + "New PortfolioSnapshot init")
+        print(utils.logger_header + "PortfolioSnapshot cache cleared")
 
     def reconcile(self, portfolio_snapshot2):
         dif = {}
