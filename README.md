@@ -23,8 +23,13 @@ $ python -m src.python.main src/resources/input/recon_in.txt src/resources/outpu
 ```
 
 ### Check contents of output file
+Unix
 ```console
 $ cat ./src/resources/output/recon_out.txt
+```
+Windows
+```console
+$ type src\resources\output\recon_out.txt
 ```
 
 Following the above python command, you will see an output of your data at:
