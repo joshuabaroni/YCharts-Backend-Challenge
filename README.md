@@ -59,4 +59,6 @@ My approach to this project is as follows:
 - Remove Stock models entirely and use dictionaries instead to map symbols to shares for improved algo speed
   - currently deep copies from list\[Stock] to dict{str, float} and back add an extra 2n to the complexity of ps.apply_trades() and ps.reconcile().
   - Altering the fundamental data type of ps.owned_stocks from list to dict would remove this extra complexity
-- Removing the need to instantiate models at allgi and using raw data types would flatten the algorithm a bit
+- Removing the need to instantiate models at all and using raw data types would flatten the algorithm a bit
+- Expose this application as a REST endpoint to produce a web app that takes the recon.in file as a POST request payload and returns a downloadable recon.out
+  - Removes the need to install anything locally
